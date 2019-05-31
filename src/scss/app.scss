@@ -186,28 +186,24 @@ header#primary-nav {
 	.page-wrap {
 		.page-section {
 			display: flex;
-			justify-content: center;
 			height: auto;
 			margin-top: 0;
 			padding-top: 250px;
+			justify-content: center;
 			.picture-row {
 				display: flex;
-				flex-direction: column;
-				ul {
-					list-style: none;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				div {
 					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-
-					li {
-						img {
-							padding: 40px;
-							height: 65vh;
-							width: 22vw;
-						}
+					img {
+						display: flex;
+						padding: 40px;
+						height: 65vh;
 					}
 				}
-				ul:last-child {
+				div:last-child {
 					padding-bottom: 150px;
 				}
 			}
@@ -215,6 +211,28 @@ header#primary-nav {
 		.hero {
 			background-size: cover;
 			height: 100vh;
+		}
+	}
+	.contact-section {
+		background-color: black;
+		height: 100vh;
+		padding: 150px;
+		font-family: "Raleway", serif;
+		.left-wrap {
+			display: flex;
+			flex-direction: column;
+			.image-wrap {
+				img {
+					height: 55vh;
+				}
+			}
+			.title-wrap {
+				p {
+					font-size: 40px;
+					font-weight: 800;
+					margin: 10px 0;
+				}
+			}
 		}
 	}
 }
