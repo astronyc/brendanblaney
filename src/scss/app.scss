@@ -17,7 +17,6 @@ html {
 }
 
 img {
-	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -30,7 +29,7 @@ a {
 	height: 480px;
 	width: 100%;
 	margin-top: 5%;
-	background-color: #141414;
+	background-color: rgb(5, 5, 5);
 	color: white;
 	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -46,10 +45,13 @@ header#primary-nav {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		max-width: 90vw;
-		margin: 0 auto;
-		width: 100vw;
-		padding-top: 60px;
+
+		@include bp(medium) {
+			width: 100vw;
+			padding-top: 60px;
+			max-width: 90vw;
+			margin: 0 auto;
+		}
 		.logo-wrap {
 			display: flex;
 			justify-content: center;
@@ -214,24 +216,75 @@ header#primary-nav {
 		}
 	}
 	.contact-section {
-		background-color: black;
-		height: 100vh;
-		padding: 150px;
 		font-family: "Raleway", serif;
-		.left-wrap {
+		.about {
+			background-color: black;
+			padding: 150px;
 			display: flex;
-			flex-direction: column;
-			.image-wrap {
-				img {
-					height: 55vh;
+			align-items: flex-end;
+			flex: 1;
+			.wrap {
+				padding: 40px;
+			}
+			.left-wrap {
+				display: flex;
+				flex-direction: column;
+				p {
+					margin: 0;
 				}
 			}
-			.title-wrap {
-				p {
-					font-size: 40px;
-					font-weight: 800;
-					margin: 10px 0;
+			.center-wrap {
+				display: flex;
+				img {
+					height: 65vh;
 				}
+			}
+			.right-wrap {
+				display: flex;
+				p {
+					line-height: 2;
+				}
+			}
+		}
+		.contact-form {
+			padding: 150px;
+			width: 100%;
+			background-color: white;
+			color: black;
+			margin: 0;
+			@include bp(medium) {
+				padding: 150px 0;
+			}
+			.nf-field-container {
+				justify-content: center;
+			}
+			.nf-form-content button,
+			.nf-form-content input[type="button"],
+			.nf-form-content input[type="submit"] {
+				background-color: black;
+				border: 1px solid white;
+				transition: 0.15s;
+			}
+			.nf-form-content button:hover,
+			.nf-form-content input[type="button"]:hover,
+			.nf-form-content input[type="submit"]:hover {
+				color: black;
+				background-color: white;
+				border: 1px solid black;
+				transition: 0.15s;
+			}
+			.nf-error .ninja-forms-field {
+				border-color: cadetblue !important;
+			}
+			.nf-error.field-wrap .nf-field-element:after {
+				background: cadetblue;
+			}
+			.nf-error-msg.nf-error-field-errors {
+				padding: 0 220px;
+			}
+			.nf-error-msg,
+			.ninja-forms-req-symbol {
+				color: #111;
 			}
 		}
 	}

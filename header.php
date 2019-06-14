@@ -45,6 +45,7 @@
                         <a class="navigation__link" href="#portraits">Portraits</a>
                         <a class="navigation__link" href="#animals">Animals</a>
                         <a class="navigation__link" href="#stills">Stills</a>
+                        <a class="navigation__link" href="#contact">Contact</a>
                     </nav>
                 </div>
             </div>

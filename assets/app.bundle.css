@@ -13,7 +13,6 @@ html {
   height: 100%; }
 
 img {
-  max-width: 100%;
   margin: 0 auto; }
 
 a {
@@ -24,7 +23,7 @@ a {
   height: 480px;
   width: 100%;
   margin-top: 5%;
-  background-color: #141414;
+  background-color: #050505;
   color: white;
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5); }
@@ -47,11 +46,13 @@ header#primary-nav {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    max-width: 90vw;
-    margin: 0 auto;
-    width: 100vw;
-    padding-top: 60px; }
+    justify-content: center; }
+    @media (min-width: 992px) {
+      header#primary-nav .inner-wrap {
+        width: 100vw;
+        padding-top: 60px;
+        max-width: 90vw;
+        margin: 0 auto; } }
     header#primary-nav .inner-wrap .logo-wrap {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -239,21 +240,79 @@ header#primary-nav {
   height: 100vh; }
 
 .home-page .contact-section {
-  background-color: black;
-  height: 100vh;
-  padding: 150px;
   font-family: "Raleway", serif; }
-  .home-page .contact-section .left-wrap {
+  .home-page .contact-section .about {
+    background-color: black;
+    padding: 150px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    .home-page .contact-section .left-wrap .image-wrap img {
-      height: 55vh; }
-    .home-page .contact-section .left-wrap .title-wrap p {
-      font-size: 40px;
-      font-weight: 800;
-      margin: 10px 0; }
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    .home-page .contact-section .about .wrap {
+      padding: 40px; }
+    .home-page .contact-section .about .left-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .home-page .contact-section .about .left-wrap p {
+        margin: 0; }
+    .home-page .contact-section .about .center-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .home-page .contact-section .about .center-wrap img {
+        height: 65vh; }
+    .home-page .contact-section .about .right-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .home-page .contact-section .about .right-wrap p {
+        line-height: 2; }
+  .home-page .contact-section .contact-form {
+    padding: 150px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    margin: 0; }
+    @media (min-width: 992px) {
+      .home-page .contact-section .contact-form {
+        padding: 150px 0; } }
+    .home-page .contact-section .contact-form .nf-field-container {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .home-page .contact-section .contact-form .nf-form-content button,
+    .home-page .contact-section .contact-form .nf-form-content input[type="button"],
+    .home-page .contact-section .contact-form .nf-form-content input[type="submit"] {
+      background-color: black;
+      border: 1px solid white;
+      -webkit-transition: 0.15s;
+      -o-transition: 0.15s;
+      transition: 0.15s; }
+    .home-page .contact-section .contact-form .nf-form-content button:hover,
+    .home-page .contact-section .contact-form .nf-form-content input[type="button"]:hover,
+    .home-page .contact-section .contact-form .nf-form-content input[type="submit"]:hover {
+      color: black;
+      background-color: white;
+      border: 1px solid black;
+      -webkit-transition: 0.15s;
+      -o-transition: 0.15s;
+      transition: 0.15s; }
+    .home-page .contact-section .contact-form .nf-error .ninja-forms-field {
+      border-color: cadetblue !important; }
+    .home-page .contact-section .contact-form .nf-error.field-wrap .nf-field-element:after {
+      background: cadetblue; }
+    .home-page .contact-section .contact-form .nf-error-msg.nf-error-field-errors {
+      padding: 0 220px; }
+    .home-page .contact-section .contact-form .nf-error-msg,
+    .home-page .contact-section .contact-form .ninja-forms-req-symbol {
+      color: #111; }
