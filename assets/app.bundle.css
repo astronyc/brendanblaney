@@ -6,7 +6,6 @@
 body,
 html {
   margin: 0;
-  color: white;
   width: 100%;
   font-family: "Teko";
   letter-spacing: 1.5px;
@@ -16,7 +15,9 @@ img {
   margin: 0 auto; }
 
 a {
-  text-decoration: none;
+  text-decoration: none; }
+
+p {
   color: white; }
 
 .page-section {
@@ -60,12 +61,14 @@ header#primary-nav {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-      header#primary-nav .inner-wrap .logo-wrap a h1 {
-        font-family: "Teko", serif;
-        font-weight: 100;
-        font-size: 72px;
-        text-transform: uppercase;
-        margin: 0; }
+      header#primary-nav .inner-wrap .logo-wrap a {
+        color: white; }
+        header#primary-nav .inner-wrap .logo-wrap a h1 {
+          font-family: "Teko", serif;
+          font-weight: 100;
+          font-size: 72px;
+          text-transform: uppercase;
+          margin: 0; }
     header#primary-nav .inner-wrap .links-wrap {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -247,9 +250,9 @@ header#primary-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1; }
@@ -262,21 +265,21 @@ header#primary-nav {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
       .home-page .contact-section .about .left-wrap p {
-        margin: 0; }
-    .home-page .contact-section .about .center-wrap {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .home-page .contact-section .about .center-wrap img {
-        height: 65vh; }
+        margin: 0;
+        padding: 10px;
+        font-size: 24px;
+        line-height: 2; }
     .home-page .contact-section .about .right-wrap {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .home-page .contact-section .about .right-wrap p {
-        line-height: 2; }
+      .home-page .contact-section .about .right-wrap img {
+        height: 65vh; }
   .home-page .contact-section .contact-form {
     padding: 150px;
     width: 100%;
@@ -312,7 +315,7 @@ header#primary-nav {
     .home-page .contact-section .contact-form .nf-error.field-wrap .nf-field-element:after {
       background: cadetblue; }
     .home-page .contact-section .contact-form .nf-error-msg.nf-error-field-errors {
-      padding: 0 220px; }
+      display: none; }
     .home-page .contact-section .contact-form .nf-error-msg,
     .home-page .contact-section .contact-form .ninja-forms-req-symbol {
       color: #111; }

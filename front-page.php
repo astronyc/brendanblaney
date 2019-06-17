@@ -66,14 +66,28 @@ get_header(); ?>
         <div class="contact-section" id="contact">
             <div class="about">
                 <div class="left-wrap wrap">
-                    <p>Brendan Blaney is a commercial and fine art photographer, hailing from Toronto, Onta</p>
+                    <div>
+                        <p>Brendan Blaney is a commercial and fine art photographer from Toronto, Ontario.
+                            Brendan plays with chiaroscuro in his intimately-lit studio set-ups, capturing striking
+                            details
+                            of the subjects he photographs. This love of contrast through light and color stems from a
+                            strong fascination with the master
+                            painters that were a result of the Renaissance, Baroque, and Rococo art movements. The first
+                            years of his career were spent in New York City, after having attended Parsons School of
+                            Design.
+                            Brendan now works and lives in Europe, traveling across borders to transcend the subjects
+                            that
+                            he meets and photographs.
+                        </p>
+                    </div>
+                    <div>
+                        <p>Clientele includes: Burberry, Loro Piana, Major Model NYC, True Model Management,
+                            Nylon Magazine, Billboard Magazine, and Friar's Club.</p>
+                    </div>
                 </div>
-                <div class="center-wrap wrap">
-                    <img src="<?php echo $artist_image; ?>" />
-                </div>
+
                 <div class="right-wrap wrap">
-                    <p>Clientele includes: Burberry, Loro Piana, Major Model NYC, True Model Management,
-                        Nylon Magazine, Billboard Magazine, and Friar's Club.</p>
+                    <img src="<?php echo $artist_image; ?>" />
                 </div>
             </div>
             <div class="contact-form">
