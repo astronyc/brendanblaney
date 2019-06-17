@@ -9,7 +9,6 @@ body,
 html {
 	margin: 0;
 	// background-color: rgb(20, 20, 20);
-	color: white;
 	width: 100%;
 	font-family: "Teko";
 	letter-spacing: 1.5px;
@@ -22,6 +21,8 @@ img {
 
 a {
 	text-decoration: none;
+}
+p {
 	color: white;
 }
 
@@ -56,6 +57,7 @@ header#primary-nav {
 			display: flex;
 			justify-content: center;
 			a {
+				color: white;
 				h1 {
 					font-family: "Teko", serif;
 					font-weight: 100;
@@ -221,7 +223,7 @@ header#primary-nav {
 			background-color: black;
 			padding: 150px;
 			display: flex;
-			align-items: flex-end;
+			align-items: center;
 			flex: 1;
 			.wrap {
 				padding: 40px;
@@ -229,20 +231,18 @@ header#primary-nav {
 			.left-wrap {
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 				p {
 					margin: 0;
-				}
-			}
-			.center-wrap {
-				display: flex;
-				img {
-					height: 65vh;
+					padding: 10px;
+					font-size: 24px;
+					line-height: 2;
 				}
 			}
 			.right-wrap {
 				display: flex;
-				p {
-					line-height: 2;
+				img {
+					height: 65vh;
 				}
 			}
 		}
@@ -280,7 +280,7 @@ header#primary-nav {
 				background: cadetblue;
 			}
 			.nf-error-msg.nf-error-field-errors {
-				padding: 0 220px;
+				display: none;
 			}
 			.nf-error-msg,
 			.ninja-forms-req-symbol {
