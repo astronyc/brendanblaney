@@ -23,15 +23,15 @@
 ?>
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 
 
 </head>
 
 <body <?php body_class(); ?>>
     <div class="site-container">
-
-        <header id="primary-nav">
+        <header id="primary-nav" class="navbar">
             <div class="inner-wrap">
                 <div class="logo-wrap">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -50,16 +50,4 @@
                 </div>
             </div>
         </header>
-
-        <!-- <nav class="desktop-nav">
-						<ul>
-						<?php wp_nav_menu(array(
-							'theme_location' => 'primary',
-							'container' => false,
-							'items_wrap' => '%3$s', // removes the <ul> from the menu as we're using our own markup
-							'fallback_cb' => mytheme_menu_fallback
-						)); ?>
-						</ul>
-					</nav> -->
-
         <div class="site-content">

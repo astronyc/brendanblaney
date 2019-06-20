@@ -14,9 +14,9 @@ get_header(); ?>
         </div>
         <div class="page-section" id="portraits">
 
-            <?php if(get_field('portrait_section')): ?>
+            <?php if(get_field('portraits_section')): ?>
             <div class="picture-row">
-                <?php while(has_sub_field('portrait_section')): ?>
+                <?php while(has_sub_field('portraits_section')): ?>
 
                 <div> <img src="<?php the_sub_field('left_image'); ?>" /></div>
                 <div><img src="<?php the_sub_field('center_image'); ?>" /></div>
@@ -91,6 +91,19 @@ get_header(); ?>
                 </div>
             </div>
             <div class="contact-form">
+                <div class="form-header">
+                    <div class="form-title">
+                        Connect with Brendan
+                    </div>
+                    <div class="form-icons">
+                        <div class="icon icon-instagram">
+                            <a href="/www.instagram.com/brendanblaney/"><i data-feather="instagram"></i></a>
+                        </div>
+                        <div class="icon icon-facebook">
+                            <a href="/www.instagram.com/brendanblaney/"><i data-feather="facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <form class="form">
                     <div class="id">
                         <?php echo do_shortcode( '[ninja_form id=1]' ); ?>

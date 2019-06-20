@@ -51,7 +51,7 @@ header#primary-nav {
     @media (min-width: 992px) {
       header#primary-nav .inner-wrap {
         width: 100vw;
-        padding-top: 60px;
+        padding: 60px 0 45px 0;
         max-width: 90vw;
         margin: 0 auto; } }
     header#primary-nav .inner-wrap .logo-wrap {
@@ -81,7 +81,8 @@ header#primary-nav {
         color: #fff;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; }
+        display: flex;
+        position: relative; }
         header#primary-nav .inner-wrap .links-wrap .navigation__link {
           display: block;
           color: #ddd;
@@ -92,6 +93,12 @@ header#primary-nav {
             color: #aaa; }
           header#primary-nav .inner-wrap .links-wrap .navigation__link.active {
             text-decoration: underline; }
+
+.color-change {
+  background-color: #050505 !important;
+  -webkit-transition: 0.15s;
+  -o-transition: 0.15s;
+  transition: 0.15s; }
 
 .hamburger {
   padding: 15px 15px;
@@ -281,41 +288,126 @@ header#primary-nav {
       .home-page .contact-section .about .right-wrap img {
         height: 65vh; }
   .home-page .contact-section .contact-form {
-    padding: 150px;
+    padding: 150px 0 50px 0;
     width: 100%;
     background-color: white;
-    color: black;
+    color: #050505;
     margin: 0; }
     @media (min-width: 992px) {
       .home-page .contact-section .contact-form {
         padding: 150px 0; } }
-    .home-page .contact-section .contact-form .nf-field-container {
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-    .home-page .contact-section .contact-form .nf-form-content button,
-    .home-page .contact-section .contact-form .nf-form-content input[type="button"],
-    .home-page .contact-section .contact-form .nf-form-content input[type="submit"] {
-      background-color: black;
-      border: 1px solid white;
-      -webkit-transition: 0.15s;
-      -o-transition: 0.15s;
-      transition: 0.15s; }
-    .home-page .contact-section .contact-form .nf-form-content button:hover,
-    .home-page .contact-section .contact-form .nf-form-content input[type="button"]:hover,
-    .home-page .contact-section .contact-form .nf-form-content input[type="submit"]:hover {
-      color: black;
-      background-color: white;
-      border: 1px solid black;
-      -webkit-transition: 0.15s;
-      -o-transition: 0.15s;
-      transition: 0.15s; }
-    .home-page .contact-section .contact-form .nf-error .ninja-forms-field {
-      border-color: cadetblue !important; }
-    .home-page .contact-section .contact-form .nf-error.field-wrap .nf-field-element:after {
-      background: cadetblue; }
-    .home-page .contact-section .contact-form .nf-error-msg.nf-error-field-errors {
-      display: none; }
-    .home-page .contact-section .contact-form .nf-error-msg,
-    .home-page .contact-section .contact-form .ninja-forms-req-symbol {
-      color: #111; }
+    .home-page .contact-section .contact-form .form-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0 150px; }
+      .home-page .contact-section .contact-form .form-header .form-title {
+        text-transform: uppercase; }
+      .home-page .contact-section .contact-form .form-header .form-icons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .home-page .contact-section .contact-form .form-header .form-icons .icon {
+          padding: 5px; }
+          .home-page .contact-section .contact-form .form-header .form-icons .icon a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background-color: #050505;
+            padding: 10px;
+            border-radius: 50px; }
+            .home-page .contact-section .contact-form .form-header .form-icons .icon a svg.feather {
+              color: white;
+              background-color: #050505; }
+  .home-page .contact-section .nf-field-container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .home-page .contact-section .nf-form-content button,
+  .home-page .contact-section .nf-form-content input[type="button"],
+  .home-page .contact-section .nf-form-content input[type="submit"] {
+    color: black;
+    background-color: white;
+    border: 1px solid #050505;
+    -webkit-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s; }
+  .home-page .contact-section .nf-form-content button:hover,
+  .home-page .contact-section .nf-form-content input[type="button"]:hover,
+  .home-page .contact-section .nf-form-content input[type="submit"]:hover {
+    color: white;
+    background-color: #050505;
+    border: 1px solid white;
+    -webkit-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s; }
+  .home-page .contact-section input#nf-field-4 {
+    outline: none;
+    width: 100%; }
+  .home-page .contact-section .nf-error .ninja-forms-field {
+    border-color: cadetblue !important; }
+  .home-page .contact-section .nf-error.field-wrap .nf-field-element:after {
+    background: cadetblue; }
+  .home-page .contact-section .nf-error-msg.nf-error-field-errors {
+    display: none; }
+  .home-page .contact-section .nf-error-msg,
+  .home-page .contact-section .ninja-forms-req-symbol {
+    color: #111; }
+
+.site-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .site-footer .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .site-footer .grid-container .connect {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .site-footer .grid-container .connect .copyright-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      .site-footer .grid-container .connect .footer-icons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0; }
+        .site-footer .grid-container .connect .footer-icons .icon {
+          padding: 5px; }
+          .site-footer .grid-container .connect .footer-icons .icon a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background-color: #050505;
+            padding: 10px;
+            border-radius: 50px; }
+            .site-footer .grid-container .connect .footer-icons .icon a svg.feather {
+              color: white;
+              background-color: #050505; }

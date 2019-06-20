@@ -49,7 +49,7 @@ header#primary-nav {
 
 		@include bp(medium) {
 			width: 100vw;
-			padding-top: 60px;
+			padding: 60px 0 45px 0;
 			max-width: 90vw;
 			margin: 0 auto;
 		}
@@ -74,6 +74,7 @@ header#primary-nav {
 				position: fixed;
 				color: #fff;
 				display: flex;
+				position: relative;
 
 				&__link {
 					display: block;
@@ -93,6 +94,10 @@ header#primary-nav {
 			}
 		}
 	}
+}
+.color-change {
+	background-color: #050505 !important;
+	transition: 0.15s;
 }
 
 // 2. -- Mobile Menu
@@ -247,44 +252,110 @@ header#primary-nav {
 			}
 		}
 		.contact-form {
-			padding: 150px;
+			padding: 150px 0 50px 0;
 			width: 100%;
 			background-color: white;
-			color: black;
+			color: #050505;
 			margin: 0;
 			@include bp(medium) {
 				padding: 150px 0;
 			}
-			.nf-field-container {
-				justify-content: center;
+			.form-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0 150px;
+				.form-title {
+					text-transform: uppercase;
+				}
+				.form-icons {
+					display: flex;
+					.icon {
+						padding: 5px;
+						a {
+							display: flex;
+							justify-content: center;
+							background-color: #050505;
+							padding: 10px;
+							border-radius: 50px;
+							svg.feather {
+								color: white;
+								background-color: #050505;
+							}
+						}
+					}
+				}
 			}
-			.nf-form-content button,
-			.nf-form-content input[type="button"],
-			.nf-form-content input[type="submit"] {
-				background-color: black;
-				border: 1px solid white;
-				transition: 0.15s;
+		}
+		.nf-field-container {
+			justify-content: center;
+		}
+		.nf-form-content button,
+		.nf-form-content input[type="button"],
+		.nf-form-content input[type="submit"] {
+			color: black;
+			background-color: white;
+			border: 1px solid #050505;
+			transition: 0.15s;
+		}
+		.nf-form-content button:hover,
+		.nf-form-content input[type="button"]:hover,
+		.nf-form-content input[type="submit"]:hover {
+			color: white;
+			background-color: #050505;
+			border: 1px solid white;
+			transition: 0.15s;
+		}
+		input#nf-field-4 {
+			outline: none;
+			width: 100%;
+		}
+		.nf-error .ninja-forms-field {
+			border-color: cadetblue !important;
+		}
+		.nf-error.field-wrap .nf-field-element:after {
+			background: cadetblue;
+		}
+		.nf-error-msg.nf-error-field-errors {
+			display: none;
+		}
+		.nf-error-msg,
+		.ninja-forms-req-symbol {
+			color: #111;
+		}
+	}
+}
+
+// Footer
+.site-footer {
+	display: flex;
+	justify-content: center;
+	.grid-container {
+		display: flex;
+		.connect {
+			display: flex;
+			flex-direction: column;
+			.copyright-text {
+				display: flex;
+				order: 1;
 			}
-			.nf-form-content button:hover,
-			.nf-form-content input[type="button"]:hover,
-			.nf-form-content input[type="submit"]:hover {
-				color: black;
-				background-color: white;
-				border: 1px solid black;
-				transition: 0.15s;
-			}
-			.nf-error .ninja-forms-field {
-				border-color: cadetblue !important;
-			}
-			.nf-error.field-wrap .nf-field-element:after {
-				background: cadetblue;
-			}
-			.nf-error-msg.nf-error-field-errors {
-				display: none;
-			}
-			.nf-error-msg,
-			.ninja-forms-req-symbol {
-				color: #111;
+			.footer-icons {
+				display: flex;
+				order: 0;
+				.icon {
+					padding: 5px;
+					a {
+						display: flex;
+						justify-content: center;
+						background-color: #050505;
+						padding: 10px;
+						border-radius: 50px;
+						svg.feather {
+							color: white;
+							background-color: #050505;
+						}
+					}
+				}
 			}
 		}
 	}
