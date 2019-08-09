@@ -199,6 +199,7 @@ header#primary-nav {
 			margin-top: 0;
 			padding-top: 250px;
 			justify-content: center;
+			flex-direction: column;
 			.picture-row {
 				display: flex;
 				flex-direction: row;
@@ -216,10 +217,24 @@ header#primary-nav {
 					padding-bottom: 150px;
 				}
 			}
+			.row {
+				display: flex;
+				justify-content: center;
+			}
+			.row .vertical-image img {
+				height: 65vh;
+				display: flex;
+				padding: 40px;
+			}
+			.row .horizontal-image img {
+				width: 46vw;
+				display: flex;
+				padding: 40px;
+			}
 		}
 		.hero {
 			background-size: cover;
-			height: 100vh;
+			height: 80vh;
 		}
 	}
 	.contact-section {
@@ -258,7 +273,7 @@ header#primary-nav {
 			color: #050505;
 			margin: 0;
 			@include bp(medium) {
-				padding: 150px 0;
+				padding: 150px 0 50px 0;
 			}
 			.form-header {
 				display: flex;
